@@ -11,7 +11,6 @@ This repository contains an end-to-end deep learning project for chest cancer cl
 - [Project Workflow](#project-workflow)
 - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Acknowledgments](#acknowledgments)
 
 ---
@@ -99,17 +98,6 @@ This project focuses on classifying chest cancer images using a pre-trained VGG-
    Run the Flask application to start the interactive front end.
    ```bash
    python app.py```
-
-## Project Structure
-```bash
-├── data/                 # Dataset and DVC files
-├── models/               # Model files tracked by DVC
-├── app.py                # Flask application for inferencing
-├── requirements.txt      # Python dependencies
-├── Dockerfile            # Docker configuration
-├── .github/workflows/    # GitHub Actions workflows for CI/CD
-├── README.md             # Project documentation
-└── ...
 
 ```
 ## Acknowledgments
