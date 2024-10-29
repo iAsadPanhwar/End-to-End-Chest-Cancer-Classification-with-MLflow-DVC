@@ -67,3 +67,52 @@ This project focuses on classifying chest cancer images using a pre-trained VGG-
    ```bash
    git clone https://github.com/your-username/chest-cancer-classification.git
    cd chest-cancer-classification
+   ```
+2. **Install Python Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Initialize DVC:**
+   Configure DVC to track data and models. Ensure dvc remote is set up to store versioned files.
+   
+   ```bash
+   dvc init
+   dvc remote add -d myremote <path-to-your-remote-storage>
+   ```
+4. **Run MLflow:**
+   Start MLflow to track experiment parameters and metrics.
+   ```bash
+   mlflow ui```
+5. **Setup Docker:**
+   Build and run the Docker container.
+   ```bash
+   docker build -t chest-cancer-app .
+   docker run -p 5000:5000 chest-cancer-app```
+6. **Deploy to Azure:**
+   Follow Azure CLI steps to deploy the Docker container on Azure.
+
+**Setting Up GitHub Actions**
+   Configure the .github/workflows/main.yml file to trigger automated tests and deploy on push events.
+
+## Usage
+1. **Running Locally:**
+   Run the Flask application to start the interactive front end.
+   ```bash
+   python app.py```
+
+## Project Structure
+```bash
+├── data/                 # Dataset and DVC files
+├── models/               # Model files tracked by DVC
+├── app.py                # Flask application for inferencing
+├── requirements.txt      # Python dependencies
+├── Dockerfile            # Docker configuration
+├── .github/workflows/    # GitHub Actions workflows for CI/CD
+├── README.md             # Project documentation
+└── ...
+
+```
+## Acknowledgments
+1. MLflow and DVC for providing robust tools for version control and experiment tracking.
+2. Azure for cloud services that make deployment accessible and scalable.
+3. GitHub Actions for automating CI/CD, ensuring streamlined development and deployment.
